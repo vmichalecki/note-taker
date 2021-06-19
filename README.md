@@ -11,6 +11,7 @@ This application allows the user to create, save, and delete notes.
 * [License](#License)
 * [Questions](#Questions)
 * [Acknowledgements](#Acknowledgements)
+* [Screenshots](#Screenshots)
 
 ## Installation
 To install this project, open [https://valerie-note-taker.herokuapp.com/](https://valerie-note-taker.herokuapp.com/) in your browser.
@@ -25,7 +26,9 @@ MIT
 For additional information please contact me via GitHub at [https://github.com/vmichalecki](https://github.com/vmichalecki) or via email at [valerie227@gmail.com](mailto:valerie227@gmail.com?subject=[GitHub]%Note%Taker).
 
 ## Acknowledgements
-Miguel Alicea [https://github.com/malicea0783](https://github.com/malicea0783)
+Miguel Alicea: [https://github.com/malicea0783](https://github.com/malicea0783)
+
+## Screenshots
 
 ![note-taker-screenshot-1](./images/note-taker-screenshot-1.png)
 
