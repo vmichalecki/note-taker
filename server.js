@@ -2,7 +2,6 @@
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
-const db = require("./db/db.json");
 const uniqid = require('uniqid');
 
 const app = express();
@@ -26,12 +25,17 @@ app.get('/api/notes', (req, res) => {
 })
 
 app.post('/api/notes', (req, res) => {
-    let data = req.body;
-    data["id"] = uniqid();
-    db.push(req.body)
-    fs.writeFile("./db/db.json", JSON.stringify(db), err => {
+    let newNote = req.body;
+    newNote.id = uniqid();
+    fs.readFile("./db/db.json", "utf8", (err, data) => {
         if (err) throw err;
-        res.json(data)
+        const parseData = JSON.parse(data);
+        console.log(JSON.parse(data));
+        parseData.push(newNote);
+        fs.writeFile("./db/db.json", JSON.stringify(parseData), err => {
+            if (err) throw err;
+            res.json(parseData)
+        })
     })
 })
 
